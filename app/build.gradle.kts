@@ -1,6 +1,8 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    kotlin("kapt")
+    id("com.google.dagger.hilt.android")
 }
 
 android {
@@ -66,5 +68,25 @@ dependencies {
     androidTestImplementation("androidx.compose.ui:ui-test-junit4")
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
+
+    //Coil
+    implementation("io.coil-kt:coil-compose:2.5.0")
+
+    // Navigation
+    val nav_version = "2.7.5"
+    implementation("androidx.navigation:navigation-compose:$nav_version")
+
+    // Retrofit
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+
+    // OkhttpClient
+    implementation("com.squareup.okhttp3:okhttp")
+    implementation("com.squareup.okhttp3:logging-interceptor:4.10.0")
+
+    //Hilt
+    implementation("com.google.dagger:hilt-android:2.48")
+    implementation ("androidx.hilt:hilt-navigation-compose:1.1.0") // или последняя версия
+    kapt("com.google.dagger:hilt-android-compiler:2.48")
 
 }
