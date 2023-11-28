@@ -20,7 +20,6 @@ import com.angelika.lesson_6android14.models.Attributes
 
 @Composable
 fun Item(model: Attributes) {
-    val name = model.name
 
     Row(
         modifier = Modifier
@@ -34,7 +33,7 @@ fun Item(model: Attributes) {
             modifier = Modifier.size(100.dp),
             contentScale = ContentScale.FillBounds,
             placeholder = painterResource(
-                id = R.drawable.image_not_found,
+                id = R.drawable.image_loading,
             ),
             error = painterResource(id = R.drawable.image_not_found)
         )
